@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #29313b;
+}
+
+.piyano-kapsama {
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background: #141414;
+    transition: all 0.3s ease;
+}
+
+.piyano-kapsama header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b2b2b2;
+}
+
+header .sutun {
+    display: flex;
+    align-items: center;
+}
+
+header .sutun span {
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 1.19rem;
+}
+
+.ses-ayari input {
+    outline: none;
+    accent-color: #fff;
+}
+
+.tus-takimi input {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    outline: none;
+    border-radius: 30px;
+    background: #4b4b4b;
+    appearance: none;
+    cursor: pointer;
+}
+
+.tus-takimi input::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    border-radius: inherit;
+    background: #8c8c8c;
+    transition: all 0.3s ease;
+}
+
+.tus-takimi input:checked:before {
+    left: 35px;
+    background: #fff;
+}
+
+.piyano-tuslari {
+    display: flex;
+    margin-top: 40px;
+}
+
+.piyano-tuslari .tus{
+    position: relative;
+    list-style: none;
+    color: #a2a2a2;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.piyano-tuslari .siyah {
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+    z-index: 9;
+}
+
+.piyano-tuslari .siyah.aktif {
+    color: #fff;
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piyano-tuslari .beyaz {
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piyano-tuslari .beyaz.aktif {
+    color: #000;
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piyano-tuslari span {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    font-size: 1.13rem;
+    text-align: center;
+    opacity: 100%;
+}
+
+.piyano-tuslari .tus.gizle span {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .piyano-kapsama {
+        width: 670px;
+        border-radius: 10px;
+        padding: 20px 35px;
+        transform: rotate(90deg);
+    }
+
+    .piyano-tuslari {
+        margin-top: 20px;
+    }
+
+    .piyano-tuslari .siyah {
+        width: 34px;
+        height: 120px;
+        margin: 0 -17px;
+    }
+    
+    .piyano-tuslari .beyaz {
+        width: 60px;
+        height: 210px;
+    }
+
+    .piyano-tuslari span {
+        bottom: 10px;
+        font-size: 0.9rem;
+    }
+}
